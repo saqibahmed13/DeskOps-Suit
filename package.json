@@ -1,5 +1,5 @@
 {
-  "name": "feugohealth",
+  "name": "deskops-suit",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -41,5 +41,8 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11",
     "vite": "^6.0.5"
-  }
+  },
+"optionalDependencies": {
+ "@rollup/rollup-linux-x64-gnu": "*"
+}
 }
