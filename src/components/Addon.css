@@ -6,6 +6,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
+
+
 .addon-title {
   font-size: 1.8rem;
   font-weight: bold;
@@ -531,7 +535,7 @@ margin-top: 12px;
 
 
 .home-button{
-  background-color: #0fb9cc !important;
+  background-color: #cec412 !important;
   color: #fff !important;
   padding: 10px 20px !important;
   border-radius: 6px;
@@ -544,7 +548,7 @@ margin-top: 12px;
 }
 
 .home-button:hover {
-  background-color: #0a8f9f !important;
+  background-color: #a49d07 !important;
 }
 
 
@@ -563,4 +567,50 @@ margin-top: 12px;
 
 .edit-button:hover {
   background-color: #520878 !important;
+}
+
+/* spacing helper for button row under the form */
+.btn-row {
+  margin-top: 16px;
+}
+
+/* back buttons in both views */
+.back-button {
+  background-color: #236197ff !important;
+  color: #fff !important;
+  padding: 10px 20px !important;
+  border-radius: 6px;
+  font-size: 1rem !important;
+  border: none !important;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+.back-button:hover {
+  filter: brightness(0.95);
+}
+
+/* ensure generic selects/inputs match removed inline styles */
+.select,
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1.05rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.select:focus,
+.input:focus {
+  border-color: #ffa726;
+  outline: none;
+  background-color: #fffdf5;
+}
+
+/* consistent block spacing where inline margin-bottom:16px was used */
+.dropdown-container,
+.input-container {
+  margin-bottom: 16px;
 }

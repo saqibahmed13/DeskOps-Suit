@@ -536,78 +536,6 @@ export default function Addon({ customer, handleCustomerUpdate }) {
     saveAs(new Blob([wbout], { type: 'application/octet-stream' }), 'quotation.xlsx');
   };
 
-  // Inline styling
-  const styles = {
-    itemTitle: {
-      fontSize: '20px',
-      fontWeight: '600',
-      marginBottom: '12px',
-      color: '#555',
-    },
-
-    input: {
-      border: '1px solid #ccc',
-      borderRadius: '4px',
-      padding: '8px',
-      width: '100%',
-      boxSizing: 'border-box',
-    },
-    select: {
-      border: '1px solid #ccc',
-      borderRadius: '4px',
-      padding: '8px',
-      width: '100%',
-      boxSizing: 'border-box',
-    },
-    button: {
-      padding: '10px 20px',
-      border: 'none',
-      borderRadius: '4px',
-      color: '#fff',
-      cursor: 'pointer',
-      marginBottom: '16px',
-      marginRight: '8px',
-    },
-    addButton: {
-      backgroundColor: '#007BFF',
-    },
-    generateButton: {
-      backgroundColor: '#28A745',
-    },
-    exportButton: {
-      backgroundColor: '#1fb817ff',
-    },
-    tableContainer: {
-      marginTop: '32px',
-    },
-    tableTitle: {
-      fontSize: '20px',
-      fontWeight: '600',
-      marginBottom: '16px',
-      color: '#555',
-    },
-    table: {
-      width: '100%',
-      borderCollapse: 'collapse',
-    },
-    th: {
-      padding: '12px',
-      border: '1px solid #ddd',
-      backgroundColor: '#f2f2f2',
-      textAlign: 'left',
-      color: '#333',
-    },
-    td: {
-      padding: '12px',
-      border: '1px solid #ddd',
-      textAlign: 'left',
-    },
-    totalRow: {
-      fontWeight: '600',
-      backgroundColor: '#fafafa',
-    },
-  };
-
   // Function to extract option labels from category data
   const getOptionLabels = (categoryData) => {
     if (categoryData.items && categoryData.items.length > 0) {
@@ -685,10 +613,10 @@ export default function Addon({ customer, handleCustomerUpdate }) {
                 <div key={index} className="item-container">
                   <h2 className="item-title">Item {index + 1}</h2>
 
-                  <div className="select-category">
-                    <label className="select-label">Select Category:</label>
+                  <div className="dropdown-container select-category">
+                    <label className="label">Select Category:</label>
                     <select
-                      style={styles.select}
+                      className="select"
                       value={item.selectedCategory}
                       onChange={(e) => handleItemChange(index, 'selectedCategory', e.target.value)}
                     >
@@ -703,10 +631,10 @@ export default function Addon({ customer, handleCustomerUpdate }) {
 
                   {/* Subcategory Select */}
                   {item?.selectedCategory && hasSubcategories && (
-                    <div>
+                    <div className="dropdown-container">
                       <label className="label">Select Subcategory:</label>
                       <select
-                        style={styles.select}
+                        className="select"
                         value={item.selectedSubCategory}
                         onChange={(e) => handleItemChange(index, 'selectedSubCategory', e.target.value)}
                       >
@@ -723,10 +651,10 @@ export default function Addon({ customer, handleCustomerUpdate }) {
                   {/* Component/Item Select */}
                   {((item?.selectedCategory && !hasSubcategories && categoryData?.items) ||
                     (item?.selectedSubCategory && subcatData?.items)) ? (
-                    <div style={{ marginBottom: '16px' }}>
+                    <div className="dropdown-container">
                       <label className="label">Select Component:</label>
                       <select
-                        style={styles.select}
+                        className="select"
                         value={item.selectedItem}
                         onChange={(e) => handleItemChange(index, 'selectedItem', e.target.value)}
                       >
@@ -761,10 +689,10 @@ export default function Addon({ customer, handleCustomerUpdate }) {
                     item.selectedSubCategory === 'Gormet Hole' &&
                     item.selectedItem &&
                     subcatData && (
-                      <div style={{ marginBottom: '16px' }}>
+                      <div className="dropdown-container">
                         <label className="label">Select Diameter:</label>
                         <select
-                          style={styles.select}
+                          className="select"
                           value={item.selectedDiameter}
                           onChange={(e) => handleItemChange(index, 'selectedDiameter', e.target.value)}
                         >
@@ -782,10 +710,10 @@ export default function Addon({ customer, handleCustomerUpdate }) {
                   {item.selectedItem &&
                     ((categoryData?.header?.length > 1 && !subcatData) ||
                       (subcatData?.header?.length > 1 && !subcatData.diameters)) && (
-                      <div style={{ marginBottom: '16px' }}>
+                      <div className="dropdown-container">
                         <label className="label">Select Option:</label>
                         <select
-                          style={styles.select}
+                          className="select"
                           value={item.selectedOption}
                           onChange={(e) => handleItemChange(index, 'selectedOption', e.target.value)}
                         >
@@ -801,10 +729,10 @@ export default function Addon({ customer, handleCustomerUpdate }) {
 
                   {/* Size Select for System Components */}
                   {item.selectedCategory === 'System Components' && item.selectedItem && (
-                    <div style={{ marginBottom: '16px' }}>
+                    <div className="dropdown-container">
                       <label className="label">Select Size:</label>
                       <select
-                        style={styles.select}
+                        className="select"
                         value={item.selectedSize}
                         onChange={(e) => handleItemChange(index, 'selectedSize', e.target.value)}
                       >
@@ -820,11 +748,11 @@ export default function Addon({ customer, handleCustomerUpdate }) {
 
                   {/* Quantity Input */}
                   {item.selectedCategory && item.selectedItem && (
-                    <div style={{ marginBottom: '16px' }}>
+                    <div className="input-container">
                       <label className="label">Quantity:</label>
                       <input
                         type="number"
-                        style={styles.input}
+                        className="input"
                         value={item.quantity}
                         min={1}
                         onChange={(e) => updateQuantity(index, e.target.value, 'addon')}
@@ -834,7 +762,7 @@ export default function Addon({ customer, handleCustomerUpdate }) {
 
                   {/* Display Price (formatted INR) */}
                   {item.price != null && (
-                    <div className="price-container ">
+                    <div className="price-container">
                       <p className="priceText">
                         <strong>Total Price:</strong> {formatINR(item.price)}
                       </p>
@@ -854,8 +782,8 @@ export default function Addon({ customer, handleCustomerUpdate }) {
             <button className="add-more-button" onClick={addItem}>
               Add More
             </button>
-            <div style={{ marginTop: '16px' }}>
-              <button style={{ ...styles.button, backgroundColor: '#236197ff' }} onClick={handleBack}>
+            <div className="btn-row">
+              <button className="back-button" onClick={handleBack}>
                 Back
               </button>
               {addOnItems.length > 0 && (
@@ -869,16 +797,16 @@ export default function Addon({ customer, handleCustomerUpdate }) {
 
         {/* Quotation Table */}
         {showQuotation && (
-          <div style={styles.tableContainer}>
-            <h2 style={styles.tableTitle}>Quotation No #{customer.quotationNumber}</h2>
-            <table style={styles.table}>
+          <div className="table-container">
+            <h2 className="table-title">Quotation No #{customer.quotationNumber}</h2>
+            <table className="table">
               <thead>
                 <tr>
-                  <th style={styles.th}>Type</th>
-                  <th style={styles.th}>Component/System</th>
-                  <th style={styles.th}>Size/Option/Diameter</th>
-                  <th style={styles.th}>Quantity</th>
-                  <th style={styles.th}>Price</th>
+                  <th>Type</th>
+                  <th>Component/System</th>
+                  <th>Size/Option/Diameter</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
                 </tr>
               </thead>
               <tbody>
@@ -886,51 +814,49 @@ export default function Addon({ customer, handleCustomerUpdate }) {
                   .filter((item) => item.selectedSystem && item.selectedDimension && item.quantity)
                   .map((item, idx) => (
                     <tr key={`system-${idx}`}>
-                      <td style={styles.td}>System</td>
-                      <td style={styles.td}>{item.selectedSystem}</td>
-                      <td style={styles.td}>
+                      <td>System</td>
+                      <td>{item.selectedSystem}</td>
+                      <td>
                         {item.selectedDimension} - {item.selectedSharing}
                       </td>
-                      <td style={styles.td}>
+                      <td>
                         <input
                           type="number"
-                          style={styles.input}
+                          className="input"
                           value={item.quantity}
                           min={1}
                           onChange={(e) => updateQuantity(idx, e.target.value, 'system')}
                         />
                       </td>
-                      <td style={styles.td}>{formatINR(item.price)}</td>
+                      <td>{formatINR(item.price)}</td>
                     </tr>
                   ))}
                 {addOnItems
                   .filter((item) => item.selectedCategory && item.selectedItem && item.quantity && item.price != null)
                   .map((item, idx) => (
                     <tr key={`addon-${idx}`}>
-                      <td style={styles.td}>Add-On</td>
-                      <td style={styles.td}>
+                      <td>Add-On</td>
+                      <td>
                         {item.selectedSubCategory
                           ? `${item.selectedCategory} - ${item.selectedSubCategory} - ${item.selectedItem}`
                           : `${item.selectedCategory} - ${item.selectedItem}`}
                       </td>
-                      <td style={styles.td}>{getDisplayValue(item)}</td>
-                      <td style={styles.td}>
+                      <td>{getDisplayValue(item)}</td>
+                      <td>
                         <input
                           type="number"
-                          style={styles.input}
+                          className="input"
                           value={item.quantity}
                           min={1}
                           onChange={(e) => updateQuantity(idx, e.target.value, 'addon')}
                         />
                       </td>
-                      <td style={styles.td}>{formatINR(item.price)}</td>
+                      <td>{formatINR(item.price)}</td>
                     </tr>
                   ))}
-                <tr style={styles.totalRow}>
-                  <td style={styles.td} colSpan={4}>
-                    Grand Total
-                  </td>
-                  <td style={styles.td}>{formatINR(uiGrandTotal)}</td>
+                <tr className="total-row">
+                  <td colSpan={4}>Grand Total</td>
+                  <td>{formatINR(uiGrandTotal)}</td>
                 </tr>
               </tbody>
             </table>

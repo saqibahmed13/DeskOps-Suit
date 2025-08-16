@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import System from "./components/System";
 import Home from "./components/Home";
 import Customer from "./components/Customer";
-import Addon from "./components/addon";
+import Addon from "./components/Addon";
 import ManageQuotations from "./components/ManageQuotations";
 // import Login from "./components/Login";
 import ContactUs from "./components/ContactUs";
