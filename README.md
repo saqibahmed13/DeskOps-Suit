@@ -41,5 +41,4 @@ A React/Vite app for building professional workspace quotations. It reads price 
 
 ---
 
-## 📁 Project Structure
 
