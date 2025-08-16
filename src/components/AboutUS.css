@@ -1,0 +1,181 @@
+.about-wrapper {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #232137;
+    background: #faf7ff;
+    min-height: 100vh;
+    margin-top: 10px;
+  }
+  
+  /* Container */
+  .about-container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Hero Section */
+  .about-hero-section {
+    background: linear-gradient(120deg, #c819df 0%, #73078c 100%);
+    color: #fff;
+    padding: 80px 0 50px 0;
+    text-align: center;
+    border-radius: 1rem;
+  }
+  
+  .about-hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: -1px;
+  }
+  
+  .about-hero-lead {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: 10px;
+    opacity: 0.97;
+  }
+  
+  /* Mission/Vision */
+  .about-mission-vision-section {
+    background: #fff;
+    padding: 60px 0 40px 0;
+  }
+  
+  .about-cards-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .about-info-card {
+    background: #ede9fe;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(124,58,237,0.09), 0 1.5px 7px rgba(0,0,0,0.03);
+    padding: 32px 26px;
+    max-width: 410px;
+    min-width: 260px;
+    flex: 1 1 290px;
+    transition: transform 0.17s cubic-bezier(.4,2.2,.6,1), box-shadow 0.13s;
+    border-left: 8px solid #e98bfa;
+  }
+  
+  .about-info-card:hover {
+    transform: translateY(-6px) scale(1.025);
+    box-shadow: 0 8px 30px rgba(124,58,237,0.17), 0 2px 12px rgba(0,0,0,0.05);
+  }
+  
+  .about-icon-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 13px;
+  }
+  
+  .about-mission {
+    color: #7c3aed;
+  }
+  
+  .about-vision {
+    color: #6d28d9;
+  }
+  
+  /* Highlights */
+  .about-highlights-section {
+    background: #faf7ff;
+    padding: 60px 0 40px 0;
+    text-align: center;
+  }
+  
+  .about-highlights-section h2 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: #a90fba;
+    color: #186eaf;
+
+  }
+  
+  .about-highlights-row {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .about-highlight-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 3px 12px rgba(124,58,237,0.08), 0 1.5px 7px rgba(0,0,0,0.02);
+    padding: 30px 24px;
+    max-width: 340px;
+    min-width: 220px;
+    flex: 1 1 210px;
+    transition: transform 0.16s, box-shadow 0.13s;
+    border-top: 4px solid #e98bfa;
+  }
+  
+  .about-highlight-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 24px rgba(124,58,237,0.14), 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .about-highlight-card h5 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #7c3aed;
+  }
+  
+  /* CTA */
+  .about-footer-cta {
+    background: linear-gradient(120deg, #c819df 0%, #73078c 100%);
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+    border-radius: 0 0 22px 22px;
+    margin-top: 30px;
+  }
+  
+  .about-footer-cta h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+  
+  .about-cta-btn {
+    background: #fff;
+    color: #7c3aed;
+    border: none;
+    font-size: 1.18rem;
+    font-weight: 600;
+    padding: 14px 40px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(124,58,237,0.09);
+    cursor: pointer;
+    transition: background 0.16s, color 0.16s;
+    border: 2px solid #a78bfa;
+  }
+  
+  .about-cta-btn:hover {
+    background: #5a3ba6;
+    color: #fff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 800px) {
+    .about-cards-row, .about-highlights-row {
+      flex-direction: column;
+      gap: 18px;
+      align-items: center;
+    }
+    .about-info-card, .about-highlight-card {
+      max-width: 98vw;
+      min-width: 0;
+      padding: 28px 14px;
+    }
+    .about-container {
+      padding: 0 8px;
+    }
+  }
+  

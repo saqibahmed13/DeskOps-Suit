@@ -1,0 +1,45 @@
+.about-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.highlight {
+  color: #ff7a00;
+}
+
+.about-subtext {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.about-card {
+  background-color: #fefefe;
+  border-radius: 12px;
+  border: none;
+}
+
+.about-section {
+  margin-bottom: 2rem;
+}
+
+.section-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1d3557;
+  margin-bottom: 0.5rem;
+}
+
+.product-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.product-list li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}

@@ -1,0 +1,72 @@
+/* .login-page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background: #c42a2a;
+}
+
+.login-main{
+    background-color: aliceblue;
+} */
+
+
+/* ---------- SIGN IN ---------- */
+.sign-in__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  
+  /* .sign-in__backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  } */
+  
+
+  
+ 
+  
+ 
+  .sign-in__wrapper form {
+    width: 24rem;
+    max-width: 90%;
+    z-index: 1;
+    background-color: white; 
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    
+}
+
+/* Define custom purple button styles */
+.input-btn {
+    background-color: rgb(128, 64, 0) !important;
+    border-color: rgba(128, 79, 0, 0.831) !important;
+    color: white;
+    padding: 0.5rem 9rem !important;
+  }
+  
+  /* Change the hover/focus state if desired */
+  .input-btn:hover{
+    background-color: rgb(164, 8, 164) !important;
+
+  }
+  
+  .btn-container {
+    text-align: center;
+    margin-top: 1.5rem; 
+    color: white;
+    border-radius: 0.5rem;
+  }
+  
+
+  
+  

@@ -1,0 +1,236 @@
+/* ManageQuotations.css */
+
+/* Container Layout */
+.manage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 20px;
+}
+
+/* Page Heading */
+.manage-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: rgb(121, 13, 131);
+}
+
+/* Quotation Card */
+.quotation-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 5px;
+  width: 40%;
+  max-width: 768px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.quotation-label {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.quotation-number {
+  color: #096398;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  flex-grow: 1;
+  padding-left: 10px;
+  margin-bottom: 8px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+
+
+.quotation-number:hover {
+  color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+
+.customer-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-right: 8px;
+}
+
+.delete-button {
+  color: #ef4444;
+  background-color: transparent;
+  border: 1px solid #ef4444;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #ef4444;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
+/* Home Button */
+.home-button {
+  background-color: rgb(121, 13, 131);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  font-weight: bold;
+}
+
+/* Confirmation Dialog Overlay */
+.confirmation-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Dialog Box */
+.confirmation-box {
+  background-color: #fff;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Dialog Title */
+.confirmation-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(121, 13, 131);
+  margin-bottom: 0.5rem;
+}
+
+/* Dialog Message */
+.confirmation-message {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Dialog Actions */
+.confirmation-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Action Buttons */
+.cancel-btn,
+.confirm-delete-btn {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.cancel-btn {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+.cancel-btn:hover {
+  background-color: #d1d5db;
+}
+
+.confirm-delete-btn {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.confirm-delete-btn:hover {
+  background-color: rgb(121, 13, 131);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.quotation-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.quotation-table th,
+.quotation-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.quotation-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+
+
+.action-btn {
+  padding: 6px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.action-btn.edit {
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 15px;
+  margin-top: 5px
+
+}
+
+.action-btn.delete {
+  background-color: #f44336;
+  color: white;
+  padding: 6px 15px;
+}
+
+.action-btn:hover {
+  opacity: 0.9;
+}
