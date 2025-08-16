@@ -82,7 +82,7 @@ function App() {
             }
           />
           <Route
-            path="/addon"
+            path="/Addon"
             element={
               <Addon
                 customer={customers[activeCustomerIndex]}
