@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# (Optional) If you plan to use Netlify Functions
+# functions = "netlify/functions"
+
+# (Optional) Redirects (for React Router / SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
