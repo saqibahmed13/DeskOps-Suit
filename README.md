@@ -6,7 +6,7 @@ A React/Vite app for building professional workspace quotations. It reads price 
 
 ## 🌐 Live Demo & Video
 
-- **Live (hosting) link:** https://YOUR-LIVE-HOSTING-LINK.example.com
+- **Hosted link:** https://YOUR-LIVE-HOSTING-LINK.example.com
 - **Demo video:** https://YOUR-DEMO-VIDEO-LINK.example.com
 
 
