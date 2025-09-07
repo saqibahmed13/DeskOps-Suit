@@ -6,8 +6,8 @@ A React/Vite app for building professional workspace quotations. It reads price 
 
 ## 🌐 Live Demo & Video
 
-- **Hosted link:** https://YOUR-LIVE-HOSTING-LINK.example.com
-- **Demo video:** https://YOUR-DEMO-VIDEO-LINK.example.com
+- **Hosted link:** https://deskops-suite.netlify.app/
+- **Demo video:** https://drive.google.com/file/d/1o6odk2-n3gkQFrAJ9JUDyh-iJyB90gox/view
 
 
 ---
